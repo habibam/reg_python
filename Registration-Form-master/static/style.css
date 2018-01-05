@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px dotted darkred; */
+}
+
+#wrapper{
+    width: 450px;
+    height: 450px;
+    margin: 0px auto;
+}
+label, .small{
+    width: 220px;
+    display: inline-block;
+    margin: 5px 0px;
+}
+
+label{
+    font-weight: bold;
+    text-align: left;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Registration</title>
+
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Register for Space Camp!</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="warning">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+            
+        <form action="/process" method="post">
+            <!-- email -->
+            <input class="small" type="text" name="email" id="email">
+            <label for="email"> : Email</label>
+
+            <!-- first name -->
+            <input class="small" type="text" name="first_name" id="first_name">
+            <label for="email"> : First Name</label>
+
+            <!-- last name -->
+            <input class="small" type="text" name="last_name" id="last_name">
+            <label for="email"> : Last name</label>
+
+            <!-- password -->
+            <input class="small" type="password" name="password" id="password">
+            <label for="email"> : Password</label>
+
+            <!-- confirm password -->
+            <input class="small" type="password" name="confirm_password" id="confirm_password">
+            <label for="email"> : Confirm Password</label>
+
+            <!-- register button -->
+            <button type="submit" formaction="/process">Register</button>
+        </form>
+    </div>
+</body>
+</html>
